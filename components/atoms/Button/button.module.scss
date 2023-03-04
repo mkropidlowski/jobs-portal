@@ -1,0 +1,51 @@
+@import 'styles/variables.scss';
+@import 'styles/breakpoints.scss';
+
+.button {
+	position: relative;
+	display: flex;
+	align-items: center;
+	opacity: 1;
+	height: fit-content;
+	padding: 12px 40px;
+	cursor: pointer;
+	text-align: center;
+	font-weight: $font-weight-bold;
+	font-size: 15px;
+	font-family: $font-main;
+	line-height: 17px;
+	border: none;
+	border-radius: 10px;
+	transition: 0.5s;
+}
+
+.buttonSmall {
+	padding: 5px 19px;
+}
+
+.buttonLarge {
+	padding: 10px 40px;
+}
+
+@mixin buttonStyle($background, $color, $borderColor, $hoverColor) {
+	color: $color;
+	background-color: $background;
+	border: 1px solid $borderColor;
+	&:hover,
+	&:active {
+		border: 1px solid $hoverColor;
+	}
+}
+
+.buttonPrimary {
+	@include buttonStyle($color-blue, $color-white, $color-white, $color-white);
+}
+
+.buttonSecondary {
+	@include buttonStyle($color-white, $color-blue, $color-white, $color-white);
+}
+
+.buttonTertiary {
+	@include buttonStyle($color-green, $color-white, $color-white, $color-white);
+}
+
