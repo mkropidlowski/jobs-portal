@@ -6,7 +6,6 @@ export default {
 	title: 'Components/Atoms/Button',
 	component: Button,
 	parameters: {
-		// More on Story layout: https://storybook.js.org/docs/react/configure/story-layout
 		layout: 'centered',
 	},
 } as ComponentMeta<typeof Button>;
