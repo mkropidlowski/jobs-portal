@@ -14,7 +14,8 @@
 		"prettier": "prettier --write .",
 		"prepare": "husky install",
 		"storybook": "start-storybook -p 6006",
-		"build-storybook": "build-storybook"
+		"build-storybook": "build-storybook",
+		"svgr": "npx @svgr/cli svg-icon --out-dir components/icons --icon --typescript  --ignore-existing "
 	},
 	"dependencies": {
 		"@storybook/preset-scss": "^1.0.3",
@@ -32,6 +33,7 @@
 		"@storybook/manager-webpack5": "^6.5.16",
 		"@storybook/react": "^6.5.16",
 		"@storybook/testing-library": "^0.0.13",
+		"@svgr/webpack": "^6.5.1",
 		"@types/node": "18.14.6",
 		"@types/react": "18.0.28",
 		"@types/react-dom": "18.0.11",
@@ -52,3 +54,4 @@
 		"@storybook/react-docgen-typescript-plugin": "npm:react-docgen-typescript-plugin@1.0.2"
 	}
 }
+
