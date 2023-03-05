@@ -3,7 +3,8 @@
 
 .wrapper {
 	width: 100%;
-
+	display: flex;
+	justify-content: center;
 	.container {
 		max-width: $pageWidth;
 		display: flex;

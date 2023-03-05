@@ -1,0 +1,20 @@
+@import 'styles/variables.scss';
+@import 'styles/breakpoints.scss';
+
+.container {
+	max-width: $pageWidth;
+	height: 80vh;
+	display: flex;
+	align-items: center;
+	gap: 150px;
+	.heading {
+		max-width: 450px;
+		font-size: 50px;
+	}
+	.buttons {
+		display: flex;
+		justify-content: space-around;
+		margin-top: 50px;
+	}
+}
+
