@@ -1,0 +1,27 @@
+@import 'styles/variables.scss';
+@import 'styles/breakpoints.scss';
+
+.container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	min-width: 850px;
+	height: 160px;
+	padding: 20px;
+	border-radius: 30px;
+	background-color: $color-gray;
+	.companyDetails {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+	}
+	.positionDetails {
+	}
+	.specificDetails {
+		display: flex;
+		flex-direction: column;
+		.addedAt {
+		}
+	}
+}
+

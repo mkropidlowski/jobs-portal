@@ -1,0 +1,11 @@
+@import 'styles/variables.scss';
+@import 'styles/breakpoints.scss';
+
+.container {
+	.offersContainer {
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+	}
+}
+

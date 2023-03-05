@@ -4,6 +4,9 @@ import Hero, { IHero } from './Hero';
 export default {
 	title: 'Components/Organisms/Hero',
 	component: Hero,
+	parameters: {
+		layout: 'centered',
+	},
 	argTypes: {},
 } as ComponentMeta<typeof Hero>;
 
