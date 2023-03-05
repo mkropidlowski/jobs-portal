@@ -11,11 +11,11 @@ export interface INavbarProps {
 const Navbar: React.FC<INavbarProps> = ({ links = menuLinks }) => {
 	return (
 		<nav className={styles.container}>
-			<ul>
+			<ul className={styles.menuLinks}>
 				{Object.values(links).map(({ id, text }) => {
 					const linkHref = `/#${id}`;
 					return (
-						<li key={text}>
+						<li key={text} className={styles.links}>
 							<Link href={linkHref}>
 								<Button type="button" color="secondary">
 									{text}
