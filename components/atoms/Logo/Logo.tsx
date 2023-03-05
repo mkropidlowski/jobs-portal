@@ -8,9 +8,10 @@ export interface ILogo {
 
 const Logo: React.FC<ILogo> = ({ className, ...rest }) => (
 	<div className={clsx(styles.container, className)} {...rest}>
-		<Heading variant="h3" bold>
+		<Heading className={styles.logo} variant="h3" bold>
 			JobsPortal
 		</Heading>
+		<span className={styles.slogan}>Find your dream job</span>
 	</div>
 );
 

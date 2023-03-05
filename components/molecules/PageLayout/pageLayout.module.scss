@@ -3,12 +3,9 @@
 
 .wrapper {
 	width: 100%;
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-	align-items: center;
+
 	.container {
-		width: $pageWidth;
+		max-width: $pageWidth;
 		display: flex;
 		justify-content: center;
 		flex-direction: column;
