@@ -1,0 +1,13 @@
+@import 'styles/variables.scss';
+@import 'styles/breakpoints.scss';
+
+.wrapper {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	.container {
+		width: $pageWidth;
+	}
+}
+
