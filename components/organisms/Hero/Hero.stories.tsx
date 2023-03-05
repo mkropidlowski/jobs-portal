@@ -1,6 +1,5 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import Hero, { IHero } from './Hero';
-import { mockHero } from './Hero.mocks';
 
 export default {
 	title: 'Components/Organisms/Hero',
@@ -11,7 +10,5 @@ export default {
 const Template: ComponentStory<typeof Hero> = (args) => <Hero {...args} />;
 
 export const HeroTemplate = Template.bind({});
-HeroTemplate.args = {
-	...mockHero,
-} as IHero;
+HeroTemplate.args = {} as IHero;
 
