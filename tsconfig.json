@@ -6,10 +6,8 @@
 		},
 		"target": "es5",
 		"lib": ["dom", "dom.iterable", "esnext"],
-		"types": ["node"],
 		"allowJs": true,
 		"skipLibCheck": true,
-		"allowSyntheticDefaultImports": true,
 		"strict": false,
 		"forceConsistentCasingInFileNames": true,
 		"noEmit": true,
@@ -19,9 +17,7 @@
 		"moduleResolution": "node",
 		"resolveJsonModule": true,
 		"isolatedModules": true,
-		"jsx": "preserve",
-		"noFallthroughCasesInSwitch": true,
-		"outDir": "./dist"
+		"jsx": "preserve"
 	},
 	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
 	"exclude": ["node_modules"]

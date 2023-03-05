@@ -43,6 +43,10 @@
 
 .buttonSecondary {
 	@include buttonStyle($color-white, $color-blue, $color-white, $color-white);
+	&:hover {
+		background-color: $color-orange;
+		color: $color-white;
+	}
 }
 
 .buttonTertiary {
