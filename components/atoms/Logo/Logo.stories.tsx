@@ -1,17 +1,17 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import LogoTemplate, { ILogo } from './Logo';
+import Logo, { ILogo } from './Logo';
 
 export default {
-	title: 'templates/LogoTemplate',
-	component: LogoTemplate,
+	title: 'Components/Atoms/Logo',
+	component: Logo,
 	parameters: {
 		layout: 'centered',
 	},
 	argTypes: {},
-} as ComponentMeta<typeof LogoTemplate>;
-const Template: ComponentStory<typeof LogoTemplate> = (args) => <LogoTemplate {...args} />;
+} as ComponentMeta<typeof Logo>;
+const Template: ComponentStory<typeof Logo> = (args) => <Logo {...args} />;
 
-export const Logo = Template.bind({});
+export const LogoVariant = Template.bind({});
 
-Logo.args = {} as ILogo;
+LogoVariant.args = {} as ILogo;
 

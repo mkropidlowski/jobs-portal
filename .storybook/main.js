@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   stories: ['../components/**/*.stories.mdx', '../components/**/*.stories.@(js|jsx|ts|tsx)'],
   /** Expose public folder to storybook as static */
@@ -9,6 +11,14 @@ module.exports = {
     '@storybook/preset-scss'
   ],
   framework: '@storybook/react',
+  webpackFinal: async (config) => {
+    config.resolve.modules = [
+      ...(config.resolve.modules || []),
+      path.resolve('./'),
+    ];
+
+		return config;
+	},
   core: {
     builder: '@storybook/builder-webpack5',
   },
