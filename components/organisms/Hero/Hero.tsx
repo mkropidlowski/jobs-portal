@@ -2,6 +2,7 @@ import clsx from 'clsx';
 import Button from 'components/atoms/Button/Button';
 import Heading from 'components/atoms/Heading/Heading';
 import { JobHunt } from 'components/icons';
+import Link from 'next/link';
 import styles from './hero.module.scss';
 
 export interface IHero {
@@ -16,9 +17,11 @@ const Hero: React.FC<IHero> = ({ className }) => {
 					Find the perfect job for you!
 				</Heading>
 				<div className={styles.buttons}>
-					<Button type="button" color="primary">
-						Find a job
-					</Button>
+					<Link href="/#jobs">
+						<Button type="button" color="primary">
+							Find a job
+						</Button>
+					</Link>
 					<Button type="button" color="tertiary">
 						Add new offer
 					</Button>

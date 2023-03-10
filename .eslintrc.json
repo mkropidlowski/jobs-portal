@@ -3,6 +3,12 @@
 	"globals": {
 		"React": "readonly"
 	},
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		}
+	},
 	"overrides": [
 		{
 			"files": ["*.stories.@(ts|tsx|js|jsx|mjs|cjs)"],
