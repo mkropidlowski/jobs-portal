@@ -1,3 +1,4 @@
+import Footer from 'components/molecules/Footer/Footer';
 import PageLayout from 'components/molecules/PageLayout/PageLayout';
 import Hero from 'components/organisms/Hero/Hero';
 import Offers from 'components/organisms/Offers/Offers';
@@ -8,6 +9,7 @@ const Home: NextPage = () => {
 		<PageLayout title="JobsPortal - Find your dream job" description="Jobs Portal for your dream job">
 			<Hero />
 			<Offers />
+			<Footer />
 		</PageLayout>
 	);
 };

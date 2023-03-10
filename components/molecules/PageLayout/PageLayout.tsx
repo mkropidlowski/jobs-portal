@@ -14,7 +14,6 @@ const PageLayout: React.FC<IPageLayout> = ({ title, description, children }) => 
 		<Seo title={title} description={description} />
 		<Navbar />
 		<main className={styles.container}>{children}</main>
-		{/* Footer in future <Footer /> */}
 	</div>
 );
 

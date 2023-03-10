@@ -59,3 +59,7 @@
 	}
 }
 
+.buttonQuaternary {
+	@include buttonStyle($color-blue, $color-white, '', '');
+}
+

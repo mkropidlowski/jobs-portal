@@ -5,7 +5,7 @@ import capitalize from 'lodash/capitalize';
 
 export interface IButtonProps {
 	type?: 'button' | 'submit' | 'reset';
-	color?: 'primary' | 'secondary' | 'tertiary';
+	color?: 'primary' | 'secondary' | 'tertiary' | 'quaternary';
 	size?: 'large' | 'medium' | 'small';
 	variant?: 'default';
 	// eslint-disable-next-line no-undef
