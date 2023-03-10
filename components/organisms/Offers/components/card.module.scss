@@ -3,8 +3,9 @@
 
 .container {
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
+	justify-content: center;
+	gap: 80px;
 	min-width: 850px;
 	height: 160px;
 	padding: 20px;
@@ -13,12 +14,18 @@
 	.companyDetails {
 		display: flex;
 		align-items: center;
+		flex-direction: column;
 		gap: 20px;
+	}
+	.positionDetails {
+		margin-top: 10px;
+		gap: 15px;
 	}
 
 	.specificDetails {
 		display: flex;
 		flex-direction: column;
+		gap: 20px;
 	}
 }
 

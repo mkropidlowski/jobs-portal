@@ -8,14 +8,14 @@ import { fakeData } from './data/fakeData';
 const Offers: React.FC<ICard> = () => {
 	return (
 		<div className={clsx(styles.container)}>
-			<Heading className={styles.heading} variant="h1" bold>
+			<Heading className={styles.heading} variant="h1" bold id="jobs">
 				Offers
 			</Heading>
 			<div className={styles.offersContainer}>
 				{fakeData.map(
-					({ companyName, companyImg, position, salaryFrom, salaryTo, salaryType, currency, location, addedAt }) => (
+					({ companyName, companyImg, position, salaryFrom, salaryTo, salaryType, currency, location, addedAt }, index) => (
 						<Card
-							key={companyName}
+							key={index}
 							companyImg={companyImg}
 							companyName={companyName}
 							position={position}
