@@ -61,5 +61,9 @@
 
 .buttonQuaternary {
 	@include buttonStyle($color-blue, $color-white, '', '');
+	&:hover,
+	&:active {
+		border: none;
+	}
 }
 
