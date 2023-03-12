@@ -19,7 +19,6 @@ export const CardTemplate = Template.bind({});
 
 CardTemplate.args = {
 	...fakeData,
-	companyImg: <Facebook width={'50px'} height={'50px'} />,
 	companyName: 'Facebook',
 	position: 'Senior Front-end Developer',
 	salaryFrom: '15000',
