@@ -1,10 +1,12 @@
 import clsx from 'clsx';
 import Button from 'components/atoms/Button/Button';
 import Heading from 'components/atoms/Heading/Heading';
+import Image from 'next/image';
 import styles from './card.module.scss';
 import { ICard } from '../types';
 
 const Card: React.FC<ICard> = ({
+	id,
 	companyImg,
 	companyName,
 	position,
@@ -18,9 +20,9 @@ const Card: React.FC<ICard> = ({
 	...rest
 }) => {
 	return (
-		<div className={clsx(styles.container, className)} {...rest}>
+		<div className={clsx(styles.container, className)} {...rest} data-id={id}>
 			<div className={styles.companyDetails}>
-				{companyImg}
+				<Image src={companyImg} alt={companyName} width={50} height={50} />
 				<p className={styles.companyName}>{companyName}</p>
 			</div>
 			<div className={styles.positionDetails}>

@@ -16,7 +16,7 @@ const Footer: React.FC<IFooter> = ({ links = footerMocks, className, ...rest }) 
 				{Object.values(links).map(({ id, text }) => {
 					const linkHref = `/#${id}`;
 					return (
-						<li key={id} className={styles.link}>
+						<li key={text} className={styles.link}>
 							<Link href={linkHref}>
 								<Button type="button" color="quaternary">
 									{text}
