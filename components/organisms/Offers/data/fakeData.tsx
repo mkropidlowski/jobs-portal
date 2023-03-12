@@ -3,7 +3,7 @@ import { Facebook } from 'components/icons';
 
 export const fakeData: ICard[] = [
 	{
-		companyImg: <Facebook width={'50px'} height={'50px'} />,
+		// companyImg: <Facebook width={'50px'} height={'50px'} />,
 		companyName: 'Facebook',
 		position: 'Junior Front-end Developer',
 		salaryFrom: '5000',
@@ -14,7 +14,7 @@ export const fakeData: ICard[] = [
 		addedAt: '01.03.2023',
 	},
 	{
-		companyImg: <Facebook width={'50px'} height={'50px'} />,
+		// companyImg: <Facebook width={'50px'} height={'50px'} />,
 		companyName: 'Google',
 		position: 'Senior Front-end Developer',
 		salaryFrom: '15000',
@@ -25,7 +25,7 @@ export const fakeData: ICard[] = [
 		addedAt: '01.03.2023',
 	},
 	{
-		companyImg: <Facebook width={'50px'} height={'50px'} />,
+		// companyImg: <Facebook width={'50px'} height={'50px'} />,
 		companyName: 'Facebook',
 		position: 'Junior Front-end Developer',
 		salaryFrom: '5000',
@@ -36,7 +36,7 @@ export const fakeData: ICard[] = [
 		addedAt: '01.03.2023',
 	},
 	{
-		companyImg: <Facebook width={'50px'} height={'50px'} />,
+		// companyImg: <Facebook width={'50px'} height={'50px'} />,
 		companyName: 'Google',
 		position: 'Senior Front-end Developer',
 		salaryFrom: '15000',
@@ -47,7 +47,7 @@ export const fakeData: ICard[] = [
 		addedAt: '01.03.2023',
 	},
 	{
-		companyImg: <Facebook width={'50px'} height={'50px'} />,
+		// companyImg: <Facebook width={'50px'} height={'50px'} />,
 		companyName: 'Facebook',
 		position: 'Junior Front-end Developer',
 		salaryFrom: '5000',

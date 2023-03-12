@@ -1,6 +1,6 @@
 export interface ICard {
-	// eslint-disable-next-line no-undef
-	companyImg?: JSX.Element;
+	id?: string;
+	companyImg?: string;
 	companyName?: string;
 	position?: string;
 	salaryFrom?: string;

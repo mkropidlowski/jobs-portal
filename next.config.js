@@ -8,8 +8,8 @@ module.exports = {
 
 		return config;
 	},
-	// images: {
-	//     unoptimized: true,
-	//     domains: ["images.unsplash.com"],
-	// },
+	images: {
+		unoptimized: true,
+		domains: ['img.icons8.com'],
+	},
 };
