@@ -4,6 +4,7 @@ import Heading from 'components/atoms/Heading/Heading';
 import Image from 'next/image';
 import styles from './card.module.scss';
 import { ICard } from '../types';
+import { useRouter } from 'next/router';
 
 const Card: React.FC<ICard> = ({
 	id,
@@ -19,8 +20,17 @@ const Card: React.FC<ICard> = ({
 	className,
 	...rest
 }) => {
+	const router = useRouter();
+
+	const showDetailsHandler = (event: React.MouseEvent<HTMLDivElement>) => {
+		const target = event.currentTarget;
+		const id = target.getAttribute('data-id');
+		if (id !== undefined && id !== null) {
+			router.push(`/jobs/${id}`);
+		}
+	};
 	return (
-		<div className={clsx(styles.container, className)} {...rest} data-id={id}>
+		<div className={clsx(styles.container, className)} {...rest} data-id={id} onClick={showDetailsHandler}>
 			<div className={styles.companyDetails}>
 				<Image src={companyImg} alt={companyName} width={50} height={50} />
 				<p className={styles.companyName}>{companyName}</p>

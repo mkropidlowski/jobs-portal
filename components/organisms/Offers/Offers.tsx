@@ -5,6 +5,7 @@ import styles from './offers.module.scss';
 import { ICard } from './types';
 import { Timestamp } from 'firebase/firestore/lite';
 import useFetchFirestore from 'hooks/useFetchFirestore';
+import { Loading } from 'components/icons';
 
 const Offers: React.FC<ICard> = () => {
 	const { error, isPending, jobs } = useFetchFirestore('jobs');
@@ -18,7 +19,11 @@ const Offers: React.FC<ICard> = () => {
 			</Heading>
 			<div className={styles.offersContainer}>
 				{error && <div>{error}</div>}
-				{isPending && <div>Loading...</div>}
+				{isPending && (
+					<div>
+						<Loading />
+					</div>
+				)}
 				{jobs.map(
 					({ id, companyName, companyImg, position, salaryFrom, salaryTo, salaryType, currency, location, addedAt }) => (
 						<Card

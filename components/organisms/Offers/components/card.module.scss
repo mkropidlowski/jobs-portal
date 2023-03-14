@@ -11,6 +11,11 @@
 	padding: 20px;
 	border-radius: 30px;
 	background-color: $color-gray;
+	&:hover {
+		background: $color-green;
+		cursor: pointer;
+		color: $color-white;
+	}
 	.companyDetails {
 		display: flex;
 		align-items: center;
