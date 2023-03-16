@@ -1,5 +1,6 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import JobDetails, { IJobDetails } from './JobDetails';
+import JobDetails from './JobDetails';
+import { ICard } from 'components/organisms/Offers/types';
 
 export default {
 	title: 'Components/Molecules/JobDetails',
@@ -11,5 +12,5 @@ const Template: ComponentStory<typeof JobDetails> = (args) => <JobDetails {...ar
 
 export const JobTemplate = Template.bind({});
 
-JobTemplate.args = {} as IJobDetails;
+JobTemplate.args = {} as ICard;
 
