@@ -10,5 +10,6 @@ export interface ICard {
 	location?: string;
 	addedAt?: string;
 	className?: string;
+	onClick?: () => void;
 }
 
