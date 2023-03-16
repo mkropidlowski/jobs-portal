@@ -1,0 +1,44 @@
+@import 'styles/variables.scss';
+@import 'styles/breakpoints.scss';
+
+.wrapper {
+	display: flex;
+	justify-content: center;
+	.container {
+		width: $pageWidth;
+		display: flex;
+		justify-content: center;
+		position: relative;
+		top: 100px;
+		.detailsSection {
+			.heading {
+				min-width: 800px;
+				height: 150px;
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+				background: $color-light-peach;
+				border-radius: 20px;
+				.companyLogo {
+					display: flex;
+					align-items: center;
+					flex-direction: column;
+					gap: 20px;
+				}
+			}
+			.positionDetails {
+				display: flex;
+				align-items: center;
+				gap: 50px;
+			}
+			.description {
+				position: relative;
+				top: 13px;
+				background: $color-peach;
+				padding: 20px;
+				border-radius: 20px;
+			}
+		}
+	}
+}
+

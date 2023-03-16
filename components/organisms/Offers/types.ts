@@ -1,5 +1,6 @@
 export interface ICard {
 	id?: string;
+	jobId?: string;
 	companyImg?: string;
 	companyName?: string;
 	position?: string;
@@ -10,6 +11,14 @@ export interface ICard {
 	location?: string;
 	addedAt?: string;
 	className?: string;
-	onClick?: () => void;
+	offerDescription?: IOfferDetails;
+}
+
+export interface IOfferDetails {
+	aboutCompany?: string;
+	benefits?: string;
+	footer?: string;
+	heading?: string;
+	requirementsList?: string[];
 }
 
