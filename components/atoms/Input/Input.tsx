@@ -6,7 +6,7 @@ import styles from './input.module.scss';
 export type IInputTypeProps = 'text' | 'password' | 'hidden' | 'number' | 'email' | 'date';
 
 export interface IInputProps extends Omit<HTMLProps<HTMLInputElement>, 'type'> {
-	type: IInputTypeProps;
+	type?: IInputTypeProps;
 	placeholder?: string;
 	id?: string;
 	name?: string;
@@ -32,7 +32,7 @@ const Input = forwardRef<HTMLInputElement, IInputProps>(
 			onChange = () => null,
 			className,
 			required,
-			shouldRenderLabel = true,
+			shouldRenderLabel = false,
 			...rest
 		},
 		ref
@@ -46,9 +46,10 @@ const Input = forwardRef<HTMLInputElement, IInputProps>(
 
 				{shouldRenderLabel ? <LabelText text={inputPlaceholder} className={styles.label} /> : null}
 				<input
-					className={clsx(styles.input, styles[`activeInput-${!!inputHandler}`])}
+					className={clsx(styles.input, styles[`activeInput-${!!inputHandler}`], !shouldRenderLabel && styles.hideLabel)}
 					type={type}
 					defaultValue={defaultValue}
+					placeholder={inputPlaceholder}
 					onChange={inputHandler}
 					ref={ref}
 					{...rest}

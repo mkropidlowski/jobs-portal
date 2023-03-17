@@ -3,7 +3,8 @@
 
 .inputWrapper {
 	position: relative;
-	width: fit-content;
+	width: 200px;
+	margin-top: 15px;
 }
 
 .input,
@@ -69,6 +70,12 @@
 
 	&:focus {
 		outline: 1px solid $color-green;
+	}
+}
+
+.hideLabel {
+	& ~ .label {
+		visibility: hidden;
 	}
 }
 
