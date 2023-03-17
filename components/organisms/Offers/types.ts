@@ -12,6 +12,7 @@ export interface ICard {
 	location?: string;
 	addedAt?: string;
 	className?: string;
+	technologies?: string[];
 	offerDescription?: IOfferDetails;
 }
 
