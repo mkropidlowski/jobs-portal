@@ -1,6 +1,7 @@
 export interface ICard {
 	id?: string;
-	jobId?: string | string[];
+	jobId?: string;
+	slug?: string;
 	companyImg?: string;
 	companyName?: string;
 	position?: string;
