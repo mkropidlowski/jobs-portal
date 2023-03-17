@@ -1,0 +1,15 @@
+@import 'styles/variables.scss';
+@import 'styles/breakpoints.scss';
+
+.wrapper {
+	display: flex;
+	justify-content: center;
+	.form {
+		position: relative;
+		top: 120px;
+		width: 900px;
+		height: auto;
+		outline: 1px solid red;
+	}
+}
+

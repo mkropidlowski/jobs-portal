@@ -68,7 +68,7 @@ const JobDetails: React.FC<ICard> = ({ jobId }) => {
 											Technologies we use:
 										</Heading>
 										<ul className={styles.stackList}>
-											{technologies.map((tech) => (
+											{technologies?.map((tech) => (
 												<li key={tech} className={styles.techLanguage}>
 													{tech}
 												</li>
