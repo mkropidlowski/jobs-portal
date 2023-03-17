@@ -1,0 +1,94 @@
+@import 'styles/variables.scss';
+@import 'styles/breakpoints.scss';
+
+.wrapper {
+	display: flex;
+	justify-content: center;
+	.container {
+		width: $pageWidth;
+		display: flex;
+		justify-content: center;
+		position: relative;
+		top: 100px;
+		.detailsSection {
+			.heading {
+				min-width: 800px;
+				height: 150px;
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+				background: $color-gray-super-light;
+				border-radius: 10px;
+				.companyLogo {
+					display: flex;
+					align-items: center;
+					flex-direction: column;
+					gap: 20px;
+				}
+			}
+			.positionDetails {
+				display: flex;
+				align-items: center;
+				gap: 50px;
+				.locationBox {
+					display: flex;
+					align-items: center;
+					flex-direction: column;
+					gap: 10px;
+				}
+			}
+
+			.technologiesBox {
+				margin-top: 10px;
+				background: $color-winter;
+				border-radius: 10px;
+				padding: 25px;
+				color: $color-white;
+				.techHeading {
+					color: $color-white;
+					letter-spacing: 1px;
+					text-align: left;
+				}
+				.stackList {
+					display: flex;
+					flex-wrap: wrap;
+					margin-top: 10px;
+					gap: 10px;
+					list-style-type: none;
+
+					.techLanguage {
+						padding: 10px;
+						background: $color-cream;
+						border-radius: 15px;
+						cursor: pointer;
+					}
+				}
+			}
+
+			.description {
+				position: relative;
+				top: 13px;
+				background: $color-wedding;
+				padding: 30px;
+				border-radius: 10px;
+
+				.aboutCompany,
+				.descriptionHeading,
+				.descriptionFooter {
+					padding: 10px;
+				}
+				.requirementsItems {
+					max-width: 700px;
+					position: relative;
+					left: 30px;
+					list-style-type: circle;
+					.item {
+						padding: 4px;
+						font-size: 14px;
+					}
+				}
+			}
+		}
+	}
+}
+
