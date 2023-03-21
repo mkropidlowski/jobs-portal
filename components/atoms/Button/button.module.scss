@@ -21,6 +21,7 @@
 
 .buttonSmall {
 	padding: 5px 19px;
+	font-size: 14px;
 }
 
 .buttonLarge {
@@ -31,21 +32,17 @@
 	color: $color;
 	background-color: $background;
 	border: 1px solid $borderColor;
-	&:hover,
-	&:active {
-		border: 1px solid $hoverColor;
-	}
 }
 
 .buttonPrimary {
-	@include buttonStyle($color-blue, $color-white, $color-white, $color-white);
+	@include buttonStyle($color-blue, $color-white, '', $color-white);
 	&:hover {
 		background-color: $color-blue-dark;
 	}
 }
 
 .buttonSecondary {
-	@include buttonStyle($color-white, $color-blue, $color-white, $color-white);
+	@include buttonStyle($color-white, $color-blue, '', $color-white);
 	&:hover {
 		background-color: $color-blue;
 		color: $color-white;

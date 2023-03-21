@@ -5,14 +5,14 @@
 	display: flex;
 	justify-content: center;
 	.container {
-		width: $pageWidth;
+		width: 900px;
 		display: flex;
 		justify-content: center;
 		position: relative;
 		top: 100px;
 		.detailsSection {
+			width: 100%;
 			.heading {
-				min-width: 800px;
 				height: 150px;
 				display: flex;
 				justify-content: space-around;

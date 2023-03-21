@@ -6,7 +6,7 @@ import capitalize from 'lodash/capitalize';
 export interface IButtonProps {
 	type?: 'button' | 'submit' | 'reset';
 	color?: 'primary' | 'secondary' | 'tertiary' | 'quaternary';
-	size?: 'large' | 'medium' | 'small';
+	sizeVariant?: 'large' | 'medium' | 'small';
 	variant?: 'default';
 	// eslint-disable-next-line no-undef
 	icon?: JSX.Element;
@@ -15,7 +15,7 @@ export interface IButtonProps {
 const Button: FC<IButtonProps & HTMLProps<HTMLButtonElement>> = ({
 	type = 'button',
 	color = 'primary',
-	size = 'medium',
+	sizeVariant,
 	children,
 	className,
 	icon = null,
@@ -23,7 +23,12 @@ const Button: FC<IButtonProps & HTMLProps<HTMLButtonElement>> = ({
 }) => {
 	return (
 		<button
-			className={clsx(styles.button, styles[`button${capitalize(color)}`], styles[`button${capitalize(size)}`], className)}
+			className={clsx(
+				styles.button,
+				styles[`button${capitalize(color)}`],
+				styles[`button${capitalize(sizeVariant)}`],
+				className
+			)}
 			type={type}
 			{...rest}
 		>

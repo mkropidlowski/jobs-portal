@@ -22,9 +22,11 @@ const Hero: React.FC<IHero> = ({ className }) => {
 							Find a job
 						</Button>
 					</Link>
-					<Button type="button" color="tertiary">
-						Add new offer
-					</Button>
+					<Link href={'/addNewOffer'}>
+						<Button type="button" color="tertiary">
+							Add new offer
+						</Button>
+					</Link>
 				</div>
 			</div>
 			<div className={styles.image}>
