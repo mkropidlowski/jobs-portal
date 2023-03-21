@@ -11,13 +11,23 @@ import { addOfferInputs } from './data';
 import { useForm } from 'react-hook-form';
 
 const AddOfferForm: FC = () => {
-	const [technologies, setTechnologies] = useState<string>('');
+	const [userValue, setUserValue] = useState<string>('');
+	const [techArray, setTechArray] = useState<string[]>([]);
+	const [requirements, setRequirements] = useState<string[]>([]);
 
-	const handlerAddTechnologies = (e) => {
-		// e.preventDefault();
-		// const newTechnology = e.target.previousSibling.value;
-		// setTechnologies([...technologies, newTechnology]);
-		// e.target.previousSibling.value = '';
+	const handleInputChange = (event) => {
+		setUserValue(event.target.value);
+	};
+
+	const handlerAddTechnologies = () => {
+		if (userValue.trim() !== '') {
+			setTechArray([...techArray, userValue]);
+		}
+	};
+	const handlerAddRequirements = () => {
+		if (userValue.trim() !== '') {
+			setRequirements([...requirements, userValue]);
+		}
 	};
 
 	const {
@@ -29,14 +39,27 @@ const AddOfferForm: FC = () => {
 		mode: 'all',
 	});
 
-	// const customGetValues = async () => {
-	// 	const formData = getValues();
-
-	// }
 	const submitForm = async () => {
 		const formData = getValues();
 		try {
-			console.log(formData);
+			await addDoc(collection(db, 'jobs'), {
+				companyName: formData.companyName,
+				companyImg: 'https://img.icons8.com/color/48/null/amazon.png',
+				currency: formData.currency,
+				addedAt: Timestamp.fromDate(new Date()),
+				location: formData.location,
+				position: formData.position,
+				salaryFrom: formData.salaryFrom,
+				salaryTo: formData.salaryTo,
+				salaryType: formData.salaryType,
+				technologies: techArray,
+				offerDescription: {
+					aboutCompany: formData.offerDescription.aboutCompany,
+					footer: formData.offerDescription.footer,
+					heading: formData.offerDescription.heading,
+					requirementsList: requirements,
+				},
+			});
 		} catch {
 			console.log('error');
 		}
@@ -114,18 +137,12 @@ const AddOfferForm: FC = () => {
 				<div className={styles.description}>
 					<div className={styles.technologiesBox}>
 						<div className={styles.inputs}>
-							<Input
-								type="text"
-								placeholder="Type technologies"
-								{...register('technologies')}
-								required
-								onChange={(e) => setTechnologies(e.target.value)}
-							/>
+							<Input type="text" placeholder="Type technologies" required value={userValue} onChange={handleInputChange} />
 							<Button type="button" color="primary" sizeVariant="small" onClick={handlerAddTechnologies}>
 								Add
 							</Button>
 						</div>
-						<div className={styles.outputList}>LISTA: {technologies}</div>
+						<div className={styles.outputList}>LISTA: {techArray}</div>
 					</div>
 
 					<Input
@@ -144,12 +161,12 @@ const AddOfferForm: FC = () => {
 					/>
 					<div className={styles.requirementsListBox}>
 						<div className={styles.inputs}>
-							<Input type="text" placeholder="Add requirements" {...register('offerDescription.requirementsList')} required />
-							<Button type="button" color="primary" sizeVariant="small">
+							<Input type="text" placeholder="Add requirements" required value={userValue} onChange={handleInputChange} />
+							<Button type="button" color="primary" sizeVariant="small" onClick={handlerAddRequirements}>
 								Add
 							</Button>
 						</div>
-						<div className={styles.outputList}>LISTA</div>
+						<div className={styles.outputList}>LISTA: {requirements}</div>
 					</div>
 					<Input
 						type="text"
@@ -200,5 +217,29 @@ export default AddOfferForm;
 // 		},
 // 	});
 // 	console.log('Document written with ID: ', docRef.id);
+// };
+
+// const addJob = async () => {
+// 	const docRef = await addDoc(collection(db, 'jobs'), {
+// 		companyName: '
+// 		companyImg: 'https://img.icons8.com/color/48/null/amazon.png',
+// 		currency:
+// 		addedAt: Timestamp.fromDate(new Date()),
+// 		location:
+// 		position:
+// 		salaryFrom:
+// 		salaryTo:
+// 		salaryType:
+// 		technologies:
+// 		offerDescription: {
+// 			aboutCompany:
+// 			footer:
+// 			heading:
+// 			requirementsList: [
+//
+// 			],
+// 		},
+// 	});
+
 // };
 
