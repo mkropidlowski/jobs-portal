@@ -12,6 +12,7 @@ import { useForm } from 'react-hook-form';
 import InputList from '../InputList/InputList';
 import { validationSchema } from './validation';
 import { yupResolver } from '@hookform/resolvers/yup';
+import clsx from 'clsx';
 
 const AddOfferForm: FC = () => {
 	const [techArray, setTechArray] = useState<string[]>([]);
@@ -34,7 +35,7 @@ const AddOfferForm: FC = () => {
 		try {
 			await addDoc(collection(db, 'jobsTest'), {
 				companyName: formData.companyName,
-				companyImg: 'https://img.icons8.com/color/48/null/amazon.png',
+				companyImg: 'https://img.icons8.com/color/48/null/company.png',
 				currency: formData.currency,
 				addedAt: Timestamp.fromDate(new Date()),
 				location: formData.location,
@@ -92,11 +93,29 @@ const AddOfferForm: FC = () => {
 				</Heading>
 
 				<div className={styles.salaryInformation}>
-					<Input type="number" placeholder="Min salary" {...register('salaryFrom')} required shouldRenderLabel={false} />
+					<Input
+						type="number"
+						isError={!!errors.salaryFrom?.message}
+						errorText={errors.salaryFrom?.message}
+						placeholder="Min salary"
+						{...register('salaryFrom')}
+						required
+						shouldRenderLabel={false}
+					/>
 					<span className={styles.minusChar}>-</span>
-					<Input type="number" placeholder="Max salary" {...register('salaryTo')} required shouldRenderLabel={false} />
+					<Input
+						type="number"
+						isError={!!errors.salaryTo?.message}
+						errorText={errors.salaryTo?.message}
+						placeholder="Max salary"
+						{...register('salaryTo')}
+						required
+						shouldRenderLabel={false}
+					/>
 					<Input
 						type="text"
+						isError={!!errors.currency?.message}
+						errorText={errors.currency?.message}
 						list="currencyVariant"
 						placeholder="Currency"
 						{...register('currency')}
@@ -110,6 +129,8 @@ const AddOfferForm: FC = () => {
 					</datalist>
 					<Input
 						type="text"
+						isError={!!errors.salaryType?.message}
+						errorText={errors.salaryType?.message}
 						list="salaryVariant"
 						placeholder="Payment"
 						{...register('salaryType')}
@@ -132,11 +153,15 @@ const AddOfferForm: FC = () => {
 							deleteItems={(item) => setTechArray(techArray.filter((techItem) => techItem !== item))}
 							items={techArray}
 							placeholder="Type technologies"
+							isError={!!errors.technologies?.message}
+							errorText={errors.technologies?.message}
 						/>
 					</div>
 
 					<Input
 						type="text"
+						isError={!!errors.offerDescription?.aboutCompany?.message}
+						errorText={errors.offerDescription?.aboutCompany?.message}
 						className={styles.descriptionInput}
 						placeholder="About company"
 						{...register('offerDescription.aboutCompany')}
@@ -144,6 +169,8 @@ const AddOfferForm: FC = () => {
 					/>
 					<Input
 						type="text"
+						isError={!!errors.offerDescription?.heading?.message}
+						errorText={errors.offerDescription?.heading?.message}
 						className={styles.descriptionInput}
 						placeholder="Offer heading"
 						{...register('offerDescription.heading')}
@@ -155,11 +182,15 @@ const AddOfferForm: FC = () => {
 							deleteItems={(item) => setRequirements(requirements.filter((requirementItem) => requirementItem !== item))}
 							items={requirements}
 							placeholder="Type requirements"
+							isError={!!errors.offerDescription?.requirementsList?.message}
+							errorText={errors.offerDescription?.requirementsList?.message}
 						/>
 					</div>
 					<Input
 						type="text"
-						className={styles.descriptionInput}
+						isError={!!errors.offerDescription?.footer?.message}
+						errorText={errors.offerDescription?.footer?.message}
+						className={clsx(styles.descriptionInput, styles.footerInput)}
 						placeholder="Offer footer"
 						{...register('offerDescription.footer')}
 						required

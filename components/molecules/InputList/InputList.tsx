@@ -9,9 +9,11 @@ interface Props {
 	deleteItems: (item: string) => void;
 	items: string[];
 	placeholder: string;
+	isError?: boolean;
+	errorText?: string;
 }
 
-const InputList: React.FC<Props> = ({ addItems, deleteItems, items, placeholder }) => {
+const InputList: React.FC<Props> = ({ addItems, deleteItems, items, placeholder, isError, errorText }) => {
 	const [userValue, setUserValue] = useState<string>('');
 
 	const handleInputChange = (event: { target: { value: string } }) => {
@@ -37,7 +39,9 @@ const InputList: React.FC<Props> = ({ addItems, deleteItems, items, placeholder 
 				<Button type="button" color="primary" sizeVariant="small" onClick={handlerAddItem}>
 					Add
 				</Button>
+				{isError ? <div className={styles.errorMessage}>{errorText}</div> : null}
 			</div>
+
 			<ul className={styles.outputList}>
 				{items.map((item) => (
 					<li key={item} className={styles.outputListItem} onClick={() => handleItemDelete(item)}>

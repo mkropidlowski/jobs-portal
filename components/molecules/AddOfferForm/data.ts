@@ -4,11 +4,12 @@ export const addOfferInputs = [
 		label: 'Company Name',
 		inputType: 'text',
 	},
-	{
-		formKey: 'companyImg',
-		label: 'Company Logo',
-		inputType: 'text',
-	},
+	// TEMPORARY DISABLED
+	// {
+	// 	formKey: 'companyImg',
+	// 	label: 'Company Logo',
+	// 	inputType: 'text',
+	// },
 	{
 		formKey: 'location',
 		label: 'Location',
