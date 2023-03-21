@@ -4,7 +4,7 @@ import Input, { IInputTypeProps } from 'components/atoms/Input/Input';
 import { ICard } from 'components/organisms/Offers/types';
 import { db } from 'config/firebase/firebaseConfig';
 import { addDoc, collection, Timestamp } from 'firebase/firestore/lite';
-import { FC, useState } from 'react';
+import { FC, useRef, useState } from 'react';
 import Navbar from '../NavBar/Navbar';
 import styles from './addOfferForm.module.scss';
 import { addOfferInputs, formStatusCode, ResponseStatus } from './data';
@@ -18,6 +18,7 @@ const AddOfferForm: FC = () => {
 	const [techArray, setTechArray] = useState<string[]>([]);
 	const [requirements, setRequirements] = useState<string[]>([]);
 	const [responseStatus, setResponseStatus] = useState<ResponseStatus>(null);
+	const formRef = useRef<HTMLFormElement | null>(null);
 
 	const {
 		register,
@@ -33,7 +34,7 @@ const AddOfferForm: FC = () => {
 		const formData = getValues();
 		setResponseStatus('pending');
 		try {
-			await addDoc(collection(db, 'jobs'), {
+			await addDoc(collection(db, 'jobsTest'), {
 				companyName: formData.companyName,
 				companyImg: 'https://img.icons8.com/color/48/null/company.png',
 				currency: formData.currency,
@@ -52,8 +53,12 @@ const AddOfferForm: FC = () => {
 				},
 			});
 			setResponseStatus('sent');
-		} catch {
+			formRef.current?.reset();
+			setRequirements([]);
+			setTechArray([]);
+		} catch (error) {
 			setResponseStatus('error');
+			console.log(error);
 		}
 	};
 
@@ -66,6 +71,7 @@ const AddOfferForm: FC = () => {
 					e.preventDefault();
 					handleSubmit(submitForm)();
 				}}
+				ref={formRef}
 			>
 				<Heading variant="h4" className={styles.heading}>
 					1. Type here basic information about your company
