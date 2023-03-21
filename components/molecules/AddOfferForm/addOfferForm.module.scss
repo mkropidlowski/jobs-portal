@@ -61,6 +61,26 @@
 			.descriptionInput {
 				width: 800px;
 			}
+
+			.outputList {
+				display: flex;
+				flex-wrap: wrap;
+				margin-top: 10px;
+				gap: 10px;
+				list-style-type: none;
+				color: $color-white;
+
+				.outputListItem {
+					padding: 10px;
+					background: $color-cream;
+					border-radius: 15px;
+					cursor: pointer;
+					&:hover {
+						background: $color-red;
+						transition: 0.5s;
+					}
+				}
+			}
 		}
 		.buttons {
 			display: flex;

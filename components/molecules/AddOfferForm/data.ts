@@ -21,3 +21,11 @@ export const addOfferInputs = [
 	},
 ];
 
+export type ResponseStatus = 'pending' | 'sent' | 'error';
+
+export const formStatusCode = {
+	pending: 'Seeending..',
+	sent: 'Sent :)',
+	default: 'Send',
+};
+
