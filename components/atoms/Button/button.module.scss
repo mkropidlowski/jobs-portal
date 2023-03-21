@@ -42,7 +42,7 @@
 }
 
 .buttonSecondary {
-	@include buttonStyle($color-white, $color-blue, '', $color-white);
+	@include buttonStyle($color-white, $color-blue, $color-white, $color-white);
 	&:hover {
 		background-color: $color-blue;
 		color: $color-white;
