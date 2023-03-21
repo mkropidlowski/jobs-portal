@@ -24,10 +24,24 @@ const AddOfferForm: FC = () => {
 			setTechArray([...techArray, userValue]);
 		}
 	};
+	const handleTechDelete = (item) => {
+		const filterArray = techArray.slice();
+		const index = filterArray.indexOf(item);
+		filterArray.splice(index, 1);
+		setTechArray(filterArray);
+	};
+
 	const handlerAddRequirements = () => {
 		if (userValue.trim() !== '') {
 			setRequirements([...requirements, userValue]);
 		}
+	};
+
+	const handleRequirementsDelete = (item) => {
+		const filterArray = requirements.slice();
+		const index = filterArray.indexOf(item);
+		filterArray.splice(index, 1);
+		setRequirements(filterArray);
 	};
 
 	const {
@@ -142,7 +156,23 @@ const AddOfferForm: FC = () => {
 								Add
 							</Button>
 						</div>
-						<div className={styles.outputList}>LISTA: {techArray}</div>
+						<ul className={styles.outputList}>
+							{techArray.map((techItem) => (
+								<li key={techItem}>
+									{techItem}
+									<Button
+										type="button"
+										color="primary"
+										sizeVariant="small"
+										onClick={() => {
+											handleTechDelete(techItem);
+										}}
+									>
+										delete
+									</Button>
+								</li>
+							))}
+						</ul>
 					</div>
 
 					<Input
@@ -166,7 +196,23 @@ const AddOfferForm: FC = () => {
 								Add
 							</Button>
 						</div>
-						<div className={styles.outputList}>LISTA: {requirements}</div>
+						<ul className={styles.outputList}>
+							{requirements.map((items) => (
+								<li key={items}>
+									{items}
+									<Button
+										type="button"
+										color="primary"
+										sizeVariant="small"
+										onClick={() => {
+											handleRequirementsDelete(items);
+										}}
+									>
+										delete
+									</Button>
+								</li>
+							))}
+						</ul>
 					</div>
 					<Input
 						type="text"
