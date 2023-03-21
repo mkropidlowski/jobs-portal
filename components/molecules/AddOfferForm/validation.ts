@@ -16,12 +16,12 @@ export const validationSchema = yup.object().shape({
 	salaryFrom: yup.string().required('To pole jest wymagane.').trim().max(20, schema.max20),
 	salaryTo: yup.string().required('To pole jest wymagane.').trim().max(20, schema.max20),
 	salaryType: yup.string().required('To pole jest wymagane.').trim().max(20, schema.max20),
-	technologies: yup.string().required('To pole jest wymagane.'),
+	// technologies: yup.string().required('To pole jest wymagane.'),
 	offerDescription: yup.object().shape({
 		aboutCompany: yup.string().required('To pole jest wymagane.').trim().max(300, schema.max300).min(100, schema.min100),
 		footer: yup.string().required('To pole jest wymagane.').trim().max(300, schema.max300).min(100, schema.min100),
 		heading: yup.string().required('To pole jest wymagane.').trim().max(300, schema.max300).min(100, schema.min100),
-		requirementsList: yup.string().required('To pole jest wymagane.'),
+		// requirementsList: yup.string().required('To pole jest wymagane.'),
 	}),
 });
 

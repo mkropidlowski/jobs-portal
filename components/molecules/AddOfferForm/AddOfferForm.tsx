@@ -33,7 +33,7 @@ const AddOfferForm: FC = () => {
 		const formData = getValues();
 		setResponseStatus('pending');
 		try {
-			await addDoc(collection(db, 'jobsTest'), {
+			await addDoc(collection(db, 'jobs'), {
 				companyName: formData.companyName,
 				companyImg: 'https://img.icons8.com/color/48/null/company.png',
 				currency: formData.currency,
