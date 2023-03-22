@@ -5,7 +5,7 @@ import Input, { IInputTypeProps } from 'components/atoms/Input/Input';
 import Link from 'next/link';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { formStatusCode, ResponseStatus } from '../AddOfferForm/data';
+import { formStatusCode, ResponseStatus } from '../AddOfferForm/helpers/data';
 import styles from './contactForm.module.scss';
 import { contactFormField } from './helpers/data';
 import { validationSchema } from './helpers/validation';
