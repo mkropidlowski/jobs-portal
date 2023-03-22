@@ -22,7 +22,7 @@ const Hero: React.FC<IHero> = ({ className }) => {
 							Find a job
 						</Button>
 					</Link>
-					<Link href={'/addNewOffer'}>
+					<Link href={'/add-new-offer'}>
 						<Button type="button" color="tertiary">
 							Add new offer
 						</Button>

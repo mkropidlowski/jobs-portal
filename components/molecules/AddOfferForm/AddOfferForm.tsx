@@ -7,10 +7,10 @@ import { addDoc, collection, Timestamp } from 'firebase/firestore/lite';
 import { FC, useRef, useState } from 'react';
 import Navbar from '../NavBar/Navbar';
 import styles from './addOfferForm.module.scss';
-import { addOfferInputs, formStatusCode, ResponseStatus } from './data';
+import { addOfferInputs, formStatusCode, ResponseStatus } from './helpers/data';
 import { useForm } from 'react-hook-form';
 import InputList from '../InputList/InputList';
-import { validationSchema } from './validation';
+import { validationSchema } from './helpers/validation';
 import { yupResolver } from '@hookform/resolvers/yup';
 import clsx from 'clsx';
 

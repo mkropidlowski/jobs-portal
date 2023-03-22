@@ -14,15 +14,23 @@ const Navbar: React.FC<INavbarProps> = ({ links = menuLinks }) => {
 		<nav className={styles.container}>
 			<Logo />
 			<ul className={styles.menuLinks}>
-				{Object.values(links).map(({ id, text }) => {
+				{Object.values(links).map(({ id, text, redirectToComponent }) => {
 					const linkHref = `/#${id}`;
 					return (
 						<li key={text} className={styles.links}>
-							<Link href={linkHref}>
-								<Button type="button" color="secondary">
-									{text}
-								</Button>
-							</Link>
+							{redirectToComponent ? (
+								<Link href={'/contact'}>
+									<Button type="button" color="secondary">
+										{text}
+									</Button>
+								</Link>
+							) : (
+								<Link href={linkHref}>
+									<Button type="button" color="secondary">
+										{text}
+									</Button>
+								</Link>
+							)}
 						</li>
 					);
 				})}
