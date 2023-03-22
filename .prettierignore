@@ -14,3 +14,4 @@ Ts/be_types/*
 cypress/
 components/icons
 next-auth.d.ts
+.env
