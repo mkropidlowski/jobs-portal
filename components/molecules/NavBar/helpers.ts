@@ -14,6 +14,7 @@ export const menuLinks = {
 	contact: {
 		id: 'contact',
 		text: 'Contact',
+		redirectToComponent: true,
 	},
 };
 

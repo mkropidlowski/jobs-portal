@@ -1,0 +1,27 @@
+@import 'styles/variables.scss';
+@import 'styles/breakpoints.scss';
+
+.container {
+	width: 100%;
+	position: relative;
+	top: 100px;
+	.form {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		margin-top: 30px;
+		gap: 50px;
+		.inputs {
+			& * {
+				width: 300px;
+				margin-top: 15px;
+			}
+		}
+		.buttons {
+			display: flex;
+			flex-direction: row;
+			gap: 15px;
+		}
+	}
+}
+
