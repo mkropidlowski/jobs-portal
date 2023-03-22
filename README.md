@@ -28,6 +28,12 @@
 ## ~ Using this form you can add your own offer.
 ![88888](https://user-images.githubusercontent.com/16814863/226870020-d73a063a-97ef-42e0-bbd6-5c78a75f1050.png)
 
+
+## ~ Contact form view: 
+
+<img width="943" alt="Zrzut ekranu 2023-03-22 o 22 28 28" src="https://user-images.githubusercontent.com/16814863/227042753-6155cae2-bf5f-465d-9043-0e5d9059365a.png">
+
+
 ## ~ Trello for create task.
 
 <img width="971" alt="Zrzut ekranu 2023-03-22 o 11 25 57" src="https://user-images.githubusercontent.com/16814863/226875210-e2977da8-bbfd-442d-80d5-5c1c9cfb4854.png">
@@ -35,7 +41,6 @@
 
 ## INFO: The project is still being developed.
   TODO:
-   - Add contact form,
    - Add 'about' section,
    - Add 'privacy-policy,
    
