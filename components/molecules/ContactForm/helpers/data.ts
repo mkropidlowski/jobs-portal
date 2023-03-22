@@ -7,12 +7,12 @@ export const contactFormField = [
 	{
 		formKey: 'name',
 		placeholder: 'Type name and surname.',
-		inputType: 'email',
+		inputType: 'text',
 	},
 	{
 		formKey: 'userMessage',
 		placeholder: 'Type some message.',
-		inputType: 'email',
+		inputType: 'text',
 	},
 ];
 

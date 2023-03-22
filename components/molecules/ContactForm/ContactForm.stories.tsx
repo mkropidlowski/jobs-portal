@@ -1,5 +1,6 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import ContactForm, { IContactForm } from './ContactForm';
+import ContactForm from './ContactForm';
+import { IContactForm } from './types';
 
 export default {
 	title: 'Components/Molecules/ContactForm',
