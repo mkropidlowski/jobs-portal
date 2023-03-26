@@ -1,0 +1,33 @@
+.about {
+	position: relative;
+	top: 100px;
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+	font-family: sans-serif;
+	ul {
+		list-style: disc;
+		margin-left: 2rem;
+
+		li {
+			margin-top: 0.5rem;
+			margin-bottom: 0.5rem;
+		}
+	}
+
+	p {
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+	}
+
+	.contactLink {
+		display: inline-block;
+		background-color: #0070f3;
+		color: #fff;
+		padding: 10px 20px;
+		border-radius: 5px;
+		text-decoration: none;
+		margin-top: 1rem;
+	}
+}
+

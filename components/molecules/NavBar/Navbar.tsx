@@ -16,10 +16,11 @@ const Navbar: React.FC<INavbarProps> = ({ links = menuLinks }) => {
 			<ul className={styles.menuLinks}>
 				{Object.values(links).map(({ id, text, redirectToComponent }) => {
 					const linkHref = `/#${id}`;
+					const hrefToComponent = `/${id}`;
 					return (
 						<li key={text} className={styles.links}>
 							{redirectToComponent ? (
-								<Link href={'/contact'}>
+								<Link href={hrefToComponent}>
 									<Button type="button" color="secondary">
 										{text}
 									</Button>
