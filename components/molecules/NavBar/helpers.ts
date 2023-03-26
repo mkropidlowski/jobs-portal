@@ -6,6 +6,7 @@ export const menuLinks = {
 	about: {
 		id: 'about',
 		text: 'About',
+		redirectToComponent: true,
 	},
 	jobs: {
 		id: 'jobs',
