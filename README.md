@@ -41,8 +41,7 @@
 
 ## INFO: The project is still being developed.
   TODO:
-   - Add 'about' section,
-   - Add 'privacy-policy,
+   - CV send options.
    
 To, run the development server:
 ```
