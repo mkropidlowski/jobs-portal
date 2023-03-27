@@ -12,6 +12,7 @@ describe('Test Button component', () => {
 	});
 	it('Test if button is clickable', () => {
 		render(<Button onClick={onClick} />);
+
 		const button = screen.getByRole('button');
 		fireEvent.click(button);
 		expect(onClick).toHaveBeenCalledTimes(1);
