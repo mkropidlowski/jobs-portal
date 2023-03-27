@@ -14,6 +14,7 @@
 - Storybook
 - Firestore from Google for API backend
 - Trello for create task
+- Jest for testing
 
 ## ~ Live view : https://jobs-portal-seven.vercel.app/
 
